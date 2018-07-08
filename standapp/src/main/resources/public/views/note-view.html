@@ -1,0 +1,35 @@
+<div class="container pad-top">
+  <table class="table note-view-table">
+      <tr>
+          <td><h3>Details for {{note.teamMember}}</h3></td>
+          <td></td>
+      </tr>
+      <tr>
+          <td>Team Member</td>
+          <td>{{note.teamMember}}</td>
+      </tr>
+      <tr>
+          <td>Project</td>
+          <td>{{note.project}}</td>
+      </tr>
+      <tr>
+          <td>Worked Yesterday</td>
+          <td>{{note.workYesterday}}</td>
+      </tr>
+      <tr>
+          <td>Work on Today</td>
+          <td>{{note.workToday}}</td>
+      </tr>
+      <tr>
+          <td>Impediments</td>
+          <td>{{note.impediments}}</td>
+      </tr>
+      <tr>
+          <td>Created On, Modified On</td>
+          <td>{{note.createdOn | date : "medium"}}, {{note.modifiedOn | date : "medium"}}</td>
+      </tr>
+  </table>
+  <div>
+      <a class="btn btn-primary" ui-sref="editNote({id:note.id})">Edit</a>
+  </div>
+</div>

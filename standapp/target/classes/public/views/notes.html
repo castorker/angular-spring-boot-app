@@ -1,0 +1,19 @@
+<div class="container pad-top">
+  <a ui-sref="newNote" class="btn-primary btn-lg nodecoration">Add New Note</a>
+  <table class="table notetable">
+      <tr>
+          <td><h3>All Notes</h3></td>
+          <td></td>
+      </tr>
+      <tr ng-repeat="note in notes | orderBy : '-modifiedOn'">
+<!--           <td>{{note.id}}</td> -->
+          <td>{{note.teamMember}}</td>
+          <td>{{note.project}}</td>
+          <td>{{note.modifiedOn | date : "medium"}}</td>
+          <td>
+              <a class="btn btn-primary" ui-sref="viewNote({id:note.id})">View</a>
+              <a class="btn btn-danger"  ng-click="deleteNote(note)">Delete</a>
+          </td>
+      </tr>
+  </table>
+</div>
